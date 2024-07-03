@@ -18,9 +18,9 @@ const Roadmap = () => {
 
                         return (
                             <div
+                                key={item.id}
                                 className={`md:flex even:md:translate-y-[7rem] p-0.25 rounded-[2.5rem] ${item.colorful ? "bg-conic-gradient" : "bg-n-6"
                                     }`}
-                                key={item.id}
                             >
                                 <div className="relative p-8 bg-n-8 rounded-[2.4375rem] overflow-hidden xl:p-15">
                                     <div className="absolute top-0 left-0 max-w-full">
@@ -42,7 +42,7 @@ const Roadmap = () => {
                                                     src={item.status === "done" ? check2 : loading1}
                                                     width={16}
                                                     height={16}
-                                                    alt={status}
+                                                    alt={status} 
                                                 />
                                                 <div className="tagline">{status}</div>
                                             </div>
